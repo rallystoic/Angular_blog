@@ -1,0 +1,48 @@
+
+.authorForm{
+	display: grid;
+	grid-template-columns:30% 1fr ;
+	grid-template-areas: "authlabel authinput ";
+	border: 3px solid black;
+	grid-gap: 8px;
+}
+.authlabel {
+	    justify-self:right;
+}    
+
+.authinput {
+	padding: 0.7em;
+	  margin-bottom: 0.5rem;
+	    border: 1px solid #9c9c9c;
+	    margin-right: 50%;
+}
+button{
+display:grid;
+grid-column: 2;
+margin-right: 50%;
+}
+button:hover
+{
+	background-color:gold;
+}
+
+
+
+.prototype
+{
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-gap: 10px;
+}
+.labelpro
+{
+background: blue;
+grid-column-start: 2;
+grid-column-end: 3;
+justify-self: right;
+}
+
+.protoin{
+	grid-column-start:4;
+	grid-column-end: 6;
+}

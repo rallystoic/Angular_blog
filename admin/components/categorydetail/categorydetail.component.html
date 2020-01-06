@@ -1,0 +1,13 @@
+<br>
+<br>
+{{alertmsg}}	
+	<div *ngIf="category">
+
+		<div>
+			<label>name: 
+				<input [(ngModel)]="category.categoryname" placeholder="name"/>
+			</label>
+		</div>
+
+		<button class="confirmBtn"(click)="Update(category.categoryid)">Confirm </button>					   
+	</div>

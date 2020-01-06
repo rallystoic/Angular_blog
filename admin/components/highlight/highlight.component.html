@@ -1,0 +1,24 @@
+<h2 style="text-align:center">
+	Highlight SECTION
+</h2>
+<table>
+	<thead>
+		<th>Post_ID</th>
+		<th>Post Title</th>
+		<th>action </th>
+	</thead>
+	<!-- loop start at tbody -->
+	<tbody *ngFor="let h of highlight">
+		<td>{{h.postid}}</td>
+		<td style="word-break: break-word">{{h.posttitle}} </td>
+		<td> <a class="redbtn"  (click)="removefromhg(h.postid)">out of highlight</a>
+		</td>
+       	</tbody>
+</table>
+
+
+<!-- A child output value to parent -->
+<button (click)="outputvalue()">
+	test
+</button>
+<hr>

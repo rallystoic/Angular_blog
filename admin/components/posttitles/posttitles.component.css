@@ -1,0 +1,61 @@
+
+
+table {
+
+	border-collapse: collapse;
+	width:100%;
+}
+
+th, td {
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+td:hover{
+	background:gold;
+}
+
+.btnsection {
+ display:grid;
+ grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+ grid-gap:10px;
+}
+
+#previous {
+grid-column-start: 5;
+grid-column-end: 6;
+}
+#next {
+grid-column-start: 7;
+grid-column-end : 8;
+word-break: break-all;
+}
+/*
+ *
+ *
+ */
+.btnsection {
+ display:grid;
+ grid-template-columns: repeat(12, 1fr);
+ grid-gap:10px;
+}
+
+#previous {
+	grid-area: btnsection;
+grid-column-start: 5;
+grid-column-end: 6;
+}
+#next {
+	grid-area: btnsection;
+grid-column-start: 7;
+grid-column-end : 8;
+}
+
+
+#domnum {
+	grid-area: btnsection;
+	grid-column: 6/7;
+	justify-self: stretch;
+	text-align: center;
+}
+

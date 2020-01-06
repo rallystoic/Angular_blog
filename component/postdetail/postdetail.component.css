@@ -1,0 +1,33 @@
+.Ctag
+{
+	font-size:40;
+background-color: orange;
+text-align: left;
+color:White;
+position:left;
+
+
+}
+
+
+.Ctag:hover
+{
+background: tomato;
+}
+
+.gobackbtn{
+background: blue;
+margin:auto;
+padding: 4px;
+position: relative;
+transition: .5s ease;
+left: 65%;
+}
+
+
+.gobackbtn:hover{
+background:violet;
+}
+
+
+

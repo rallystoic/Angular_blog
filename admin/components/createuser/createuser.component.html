@@ -1,0 +1,40 @@
+<!--Start of Form group -->
+<!--   ./createuser.component.css -->
+
+<br>
+<div style="text-align:center"> Comple user form </div>
+<br>
+<form [formGroup]="userdetail" (submit)="createuser()" class="userform">
+	<div class="msg">
+		{{succeedinformation.succeedDetail}}
+	</div>
+	<label class="userlabel">
+		UserName : 
+	</label>
+	<input type="text" formControlName="username" class="userinput" required minlength="6" >
+	<label class="userlabel">
+		Password : 
+	</label>
+	<input type="password" formControlName="password" class="userinput" required minlength="6" >
+	<!--break new line -->	
+	<br>
+	<br>
+	<br>
+	<label class="userlabel" for="firstName" >
+		firstName : 
+	</label>
+	<input type="text" id="firstName" formControlName="userfirstname" class="userinput" required minlength="3" >
+	<label class="userlabel">
+		LastName : 
+	</label>
+	<input type="text" formControlName="userlastname" class="userinput"  required minlength="3">
+	<button type="submit" [disabled]="!userdetail.valid" class="sendBtn">create user</button>
+</form>
+<br>
+<!--End  of Form group -->
+
+
+
+
+
+

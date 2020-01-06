@@ -1,0 +1,17 @@
+<div *ngFor="let p of postdt">
+
+
+<h2 style="text-align: center">
+	{{p.postTitle}} 
+</h2>
+{{p.contentDetail}} 
+<p style="text-align: right">
+{{p.postedDateTime}} 
+</p>
+<br>
+<p style="font:medium" ><span style="color:tomato">Author</span> : {{p.userFirstName}}  {{p.userLastName}}</p> 
+{{p.categoryID}} 
+{{p.categoryName}} 
+
+<button (click)="editpage()">edit</button>
+</div>

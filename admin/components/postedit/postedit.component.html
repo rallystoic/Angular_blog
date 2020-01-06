@@ -1,0 +1,28 @@
+<form [formGroup]="PostcontentForm">
+	<label>
+		Title:
+		<input type="text" formControlName="title"   class="titleinput">
+		<br>
+		Image 
+		<input type="file" (change)="onfileselect($event)"> 
+		<p> Content </p>
+	</label>
+
+<!-- Content -->
+<quill-editor formControlName="contentdetail" >
+</quill-editor>
+
+<!-- Content -->
+		<!-- this is slelect material   -->
+			<mat-form-field >
+				<mat-label>Select Category</mat-label>
+				<mat-select [(value)]="selected" >
+					<div *ngFor="let C of categories">
+						<mat-option value="{{C.categoryid}}">{{C.categoryname}}</mat-option>
+					</div>		    
+				</mat-select>
+			</mat-form-field>
+		<!-- this is slelect material   -->
+</form>
+<button (click)="updatepost()" class="editBtn"> Edit
+</button>

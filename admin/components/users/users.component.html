@@ -1,0 +1,39 @@
+<!-- Creat user button -->
+			<mat-paginator [length]="totallength.total"
+							       [pageSizeOptions]="[8]"
+							       [pageSize]="8"
+							       (page)="printsome($event.pageIndex)">	 
+			</mat-paginator>
+<br>
+<hr>
+<table>
+	<tr>
+		<th>No.</th>
+		<th>User Name</th>
+		<th>First Name</th>
+		<th>Last Name  </th>
+		<th>Role </th>
+		<th> </th>
+		<th> </th>
+	</tr>
+		<tr *ngFor="let c of users">
+		<td> {{c.userid}} </td>
+		<td> {{c.username}} </td>
+		<td> {{c.userfirstname}} </td>
+		<td> {{c.userlastname}} </td>
+		<td> {{c.rolename}} </td>
+		<td>
+			<button
+				routerLink="/admin/users/edit/{{c.userid}}" class="editBtn" > Edit </button>
+		</td>
+		<td>
+			<button  class="bluebtn"> detail </button>
+		</td>
+		<td>
+			<button (click)="RemoveUser(c.userid)" class="RemoveBtn"> Remove </button>
+		</td>
+	</tr>
+	</table>
+
+<button routerLink="/admin/users/create" routerLinkActive="active"  class="editBtn"> new user </button>
+		<!-- End of User List table -->

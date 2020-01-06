@@ -1,0 +1,30 @@
+
+<br>
+<br>
+<br>
+<br>
+<div class="loginform">
+
+	<form [formGroup]="authenticationform" class="authentication" (submit)="challenge()">
+		<h2 class="alertmsg"> {{msg}} </h2>
+		<div class="imgcontainer">
+			<img src="" alt="Avatar" class="avatar">
+		</div>
+
+		<div class="container">
+			<label><b>Username</b></label>
+			<input type="text" placeholder="Enter Username"   formControlName="username">
+
+			<label ><b>Password</b></label>
+			<input type="password" placeholder="Enter Password"   formControlName="password">
+
+		</div>
+		<button type="submit" [disabled]="!authenticationform.valid">Login</button>
+	</form>
+
+</div>
+
+
+<br>
+<br>
+<br>

@@ -1,0 +1,46 @@
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute , Router} from "@angular/router";
+import { Location } from "@angular/common";
+import { postdetailfull } from 'src/app/Entities/postpayload';
+import { CrudPostcontentService } from 'src/app/Services/crud-postcontent.service';
+@Component({
+  selector: 'app-postdetail',
+  templateUrl: './postdetail.component.html',
+  styleUrls: ['./postdetail.component.css']
+})
+export class PostdetailComponent implements OnInit {
+
+constructor(
+private route : ActivatedRoute,
+private location : Location,
+private crud : CrudPostcontentService,
+private router : Router
+
+) { }
+
+postdt : postdetailfull[] = [];
+
+goback(): void {
+this.location.back();
+}
+
+fetchpostdetail():void
+{
+const id = +this.route.snapshot.paramMap.get("id");
+this.crud.getpostdetail(id).subscribe(postdt => this.postdt = postdt);
+}
+
+editpage():void
+{
+  const editID = +this.route.snapshot.paramMap.get("id");
+  const edit =  this.postdt[0].postID
+  const testlink = "/postedit/"+edit;
+  this.router.navigate([testlink]);
+}
+
+
+  ngOnInit() {
+  this.fetchpostdetail();
+  }
+
+}

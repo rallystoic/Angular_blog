@@ -1,0 +1,86 @@
+/* testing form validation */
+/*
+input:invalid {
+	border: 2px solid red;
+
+}
+input:invalid:required {
+	border: 3px solid ;
+}
+
+
+input:valid {
+	border: 6px solid green;
+}
+*/
+/*
+input:required:invalid, input:focus:invalid {
+	border:2px solid red;
+}
+*/
+input:required:invalid {
+}
+input:required:valid {
+	/*
+	background-image: url(https://localhost:5001/images/icons/icons8-approval-48.png);
+	*/
+	background-position: right ;
+	background-repeat: no-repeat;
+	border: 2px solid green;
+}
+
+
+
+.sendBtn {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+}
+.sendBtn:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+.sendBtn:active {
+	position:relative;
+	top:1px;
+}
+
+/*
+ * grid form to
+ */
+
+.userform{
+
+display: grid;
+grid-template-columns: 30% 1fr;
+grid-gap: 1ch;
+}
+
+.msg {
+	grid-column: 2/3;
+	color:red;
+}
+
+
+.userlabel
+{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	justify-self: right;
+
+}
+
+
+
+.userinput
+{
+	grid-column-start:2;
+	grid-column-end:3;
+
+	margin-right:50%;
+
+}
+.sendBtn
+{
+grid-column-start: 2;
+margin-right: 50%;
+}

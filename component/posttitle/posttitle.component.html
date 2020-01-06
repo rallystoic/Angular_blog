@@ -1,0 +1,36 @@
+<div class="hg">
+	highlight
+</div>
+
+<div class="highlight">
+	<div class="highlight_content" *ngFor="let h of highpost">
+		<img src="{{apiurl}}{{h.titleimgurl}}" alt="Paris" width="240" height="240" >
+		 {{h.posttitle}}  
+		<a class="bluebtn" routerLink="/postdetail/{{h.postid}}">Read more..</a>			
+	</div>
+</div>
+
+<br>
+
+<div class="hg">
+	<i> News </i>
+</div>
+<!-- Content section -->
+<div class="container">
+	<div class="Content_inner" *ngFor="let p of ptitle">
+		<img  src="{{apiurl}}{{p.titleimgurl}}" alt="Paris" width="280" height="280" id="Content_inner_top" >
+		<div id="Content_inner_center">
+				<h4> {{p.posttitle}} </h4>
+			<p> {{p.posted}} </p>
+		</div>
+
+		<div>
+			<a class="bluebtn" routerLink="/postdetail/{{p.postid}}" id="Content_inner_bottom"> Read more..</a>			
+		</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+<!-- Content section -->
+

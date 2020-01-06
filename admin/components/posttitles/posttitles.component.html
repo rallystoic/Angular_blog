@@ -1,0 +1,46 @@
+
+<!-- Cnum is  number type  -->
+<!-- Outnum is number type and its is an EventEmitter -->
+<app-highlight [Cnum]="Cnum" (Outnum)="listenfromchild($event)">
+</app-highlight>
+
+<div class="btnsection">
+	<button class="navigate" id="previous" (click)="decremented()">  previous <<</button>	
+
+
+	<div id="domnum">{{DOMnum}}</div>	
+	<button class="navigate" id="next" (click)="incremented()"> next >> </button>	
+</div>
+<table>
+	<thead>
+		<th>Post_ID</th>
+		<th>Post Title</th>
+		<th>author firstname</th>
+		<th>author lastname</th>
+		<th>Category </th>
+		<th> date  </th>
+		<th>action </th>
+		<th>action </th>
+		<th>action </th>
+	</thead>
+	<tbody *ngFor="let pos of posttitletable">
+			<td> {{pos.postid}} </td>
+			<td style="text-align:center">
+<a  style="word-break:break-all; text-align:center"  routerLink="/postdetail/{{pos.postid}}">{{pos.posttitle}}</a>
+			</td>
+			<td> {{pos.userfirstname}} </td>
+			<td> {{pos.userlastname}} </td>
+			<td> {{pos.categoryname}} </td>
+			<td> {{pos.posted}} </td>
+			<td>
+				<a routerLink="/admin/postedit/{{pos.postid}}" class="greenbtn" > Edit </a>
+			</td>
+			<td>
+				<a  class="bluebtn" (click)="newchange(pos.postid)"> newchange </a>
+			</td>
+			<td>
+				<a  class="redbtn" (click)="removepostcontent(pos.postid)"> Remove </a> 
+			</td>
+	</tbody>
+	</table>
+		

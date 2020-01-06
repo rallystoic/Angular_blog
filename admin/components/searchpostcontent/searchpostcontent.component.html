@@ -1,0 +1,40 @@
+<p>searchpostcontent works!</p>
+<h2>
+ Not async :	{{testword}}
+</h2>
+
+<h2>
+ Async	{{testword$}}
+</h2>
+
+<!--  function to be call  -->
+
+<input type="text" #inputext (input)="display(inputext.value)">
+
+{{displaytxt}}
+
+<!--  function to be call  -->
+
+
+
+<!-- search postcontent by title name -->
+<h4><label for="search-box">Search Postcontent</label></h4>
+
+	    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+	    {{(ptitle$ | async)?.length}}
+	<div *ngFor="let p of ptitle$ | async">
+<div class="Content_inner">
+	<a  routerLink="/postdetail/{{p.postID}}">
+		<h2> {{p.postTitle}} </h2>
+	</a>
+	<p class="time">{{p.postedDateTime}} </p>
+	<hr>
+</div>
+	</div>
+<div class="zippy">
+	    <div (click)="toggle()">Toggle</div>
+	        <div [hidden]="!visible">
+			      <ng-content> </ng-content>
+			          </div>
+				   </div>

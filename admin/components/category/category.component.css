@@ -1,0 +1,117 @@
+
+/*
+ *table Section
+ *
+ */
+table {
+
+	border-collapse: collapse;
+	width: 50%;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+/*
+ *table Section
+ *
+ */
+
+
+/*
+ * button section
+ *Edit button section
+ */
+
+	.editBtn {
+		box-shadow:inset 0px 1px 0px 0px #a4e271;
+		background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+		background-color:#89c403;
+		border-radius:6px;
+		border:1px solid #74b807;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #528009;
+	}
+	.editBtn:hover {
+		background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+		background-color:#77a809;
+	}
+	.editBtn:active {
+		position:relative;
+		top:1px;
+	}
+	.RemoveBtn {
+		grid-area:RemoveBtn;
+		box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+		background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+		background-color:#fc8d83;
+		border-radius:6px;
+		border:1px solid #d83526;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Times New Roman;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #b23e35;
+		text-align:center;
+	}
+	.RemoveBtn:hover {
+		background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+		background-color:#e4685d;
+	}
+	.RemoveBtn:active {
+		position:relative;
+		top:1px;
+	}
+	.CreateBtn {
+		grid-area: CreateBtn;
+		box-shadow:inset 0px 1px 0px 0px #97c4fe;
+		background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+		background-color:#3d94f6;
+		border-radius:6px;
+		border:1px solid #337fed;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Georgia;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #1570cd;
+	}
+	.CreateBtn:hover {
+		background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+		background-color:#1e62d0;
+	}
+	.CreateBtn:active {
+		position:relative;
+		top:1px;
+	}
+
+
+
+
+
+
+	/*
+	 *testing li hero
+	 *
+	 *
+	 *
+	 */
+	/* HeroesComponent's private CSS styles */
+

@@ -1,0 +1,47 @@
+<!-- --><div *ngIf="inputcondi">
+
+	{{alertmsg}}
+	<!-- --></div>
+
+<!-- Start of category Creation -->
+<input type="text" placeholder="insert category name" [(ngModel)]="inputcategory">
+<button (click)="createcategory()" class="CreateBtn"> create  </button>
+
+<!-- end of creating category -->
+<!-- Start of ngIf Isshow -->
+	<div *ngIf="Isshow">
+	<div *ngIf="category">
+		<div>
+			<label>name: 
+				<input [(ngModel)]="category.categoryname" placeholder="name"/>
+			</label>
+		</div>
+
+		<button class="editBtn"(click)="Update(category.categoryid)">Confirm </button>					   
+		<button (click)="cancel()" class="RemoveBtn">Cancel
+		</button>
+	</div>
+		<!-- hide Isshow and request http get  -->	
+	</div>
+<!-- end of ngIf Isshow -->
+<!-- start of Categories List -->
+<table>
+	<tr>
+		<th> ID </th>
+		<th> Category Name </th>
+		<th> </th>
+		<th> </th>
+	</tr>
+	<tr *ngFor="let c of categories" >
+		<td> {{c.categoryid}} </td>
+		<td> {{c.categoryname}} </td>
+		<td>
+			<!-- End of Categories List -->
+			<button
+(click)="onSelect(c)" class="editBtn" > Edit </button>
+		</td>
+		<td>
+			<button (click)="removeCategory(c.categoryid)" class="RemoveBtn"> Remove </button>
+		</td>
+	</tr>
+	<table>

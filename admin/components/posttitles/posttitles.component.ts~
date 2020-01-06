@@ -1,0 +1,70 @@
+import { Component, OnInit, Input } from '@angular/core';
+import { Posttitle, SucceedInformation, Totallength} from '../../model/baseclass';
+import { PostcontentService } from '../../services/postcontent.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-posttitles',
+  templateUrl: './posttitles.component.html',
+  styleUrls: ['./posttitles.component.css']
+})
+export class PosttitlesComponent implements OnInit {
+
+constructor(
+private postcontent: PostcontentService,
+private router: ActivatedRoute
+) { }
+
+// Properties
+ptitles: Posttitle[] = [];
+succeedinformation: SucceedInformation;
+totallength: Totallength;
+defaultnum: number = 0;
+
+getpostlist(): void {
+this.postcontent.postcontentlist().subscribe(something => {
+this.ptitles = something; }
+);
+}
+removepost(namee: string) {
+const Rmresult = window.confirm('do you want to remove?');
+if (Rmresult === true) {
+this.postcontent.deletepostcontent(namee).subscribe(succeedinformation => {
+this.succeedinformation = succeedinformation;
+if (this.succeedinformation.issucceed === true) {
+this.getpostlist();
+}
+}
+);
+}
+
+}
+// end
+
+// get totallength of postcontent
+gettotalpostcontent(): void {
+this.postcontent.gettotalpost().subscribe(totallength => {
+this.totallength = totallength;
+});
+}
+// newpost
+incremented() {
+this.defaultnum += 1;
+
+}
+decremented() {
+if (this.defaultnum === 0) {
+this.defaultnum += 1;
+}
+this.defaultnum -= 1;
+
+}
+
+
+ngOnInit() {
+
+this.gettotalpostcontent();
+}
+
+}

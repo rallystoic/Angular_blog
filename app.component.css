@@ -1,0 +1,57 @@
+.grid-container {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-row-gap: 0px; 
+}
+
+.Header {
+	grid-column: 2/12;
+}
+
+/* Content section */
+.Content { 
+	grid-column: 2/12;
+}
+
+
+.Footer {
+	grid-column: 2/12;
+	background-color:black;
+}
+
+.buttonyes{
+	display:block;
+	border-radius: 15px;
+	background: tomato;
+	margin: auto;
+	padding:auto;
+}
+
+.buttonno{
+	border-radius: 15px;
+	background: tomato;
+	margin: auto;
+	padding:auto;
+}
+/* Content section */
+
+
+
+
+
+.footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+/*Footer SECTION */
+

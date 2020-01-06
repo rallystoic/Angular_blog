@@ -1,0 +1,35 @@
+	<!-- start new form -->
+	<!--  Author form-->
+	<h3>
+	Update author
+	</h3>
+	
+	<form [formGroup]="authorForm" class="authorForm" (submit)="updateprofile()" >
+	
+		<label class="authlabel">
+	username :
+		</label>
+			<input type="text" formControlName="username" readonly class="authinput">
+		<label class="authlabel">
+			firstname :
+		</label>
+			<input type="text" formControlName="firstname" class="authinput">
+		<label class="authlabel">
+			lastname :
+		</label>
+			<input type="text" formControlName="lastname" class="authinput">
+		<label class="authlabel">
+			password :
+		</label>
+			<input type="password" formControlName="password" class="authinput">
+		<label class="authlabel">
+			role :
+		</label>
+			<input type="text" formControlName="role" readonly placeholder="author" class="authinput">
+
+	<button type="submit" class="greenbtn" [disabled]="!authorForm.valid">update</button>
+</form>	
+<!-- Author form end here -->
+
+
+

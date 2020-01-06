@@ -1,0 +1,18 @@
+<div class="Nav_menu">
+	<a class="nav" id="Home_menu" routerLink="/Post" routerLinkActive="active">Home</a>
+	<a class="nav" id="News" routerLink="/admin" routerLinkActive="active">About me</a>
+	<a class="nav" id="about" routerLink="/admin/users" routerLinkActive="active">About you</a>
+	<a class="nav" id="contact" routerLink="/admin/users" routerLinkActive="active">contact us</a>
+	<div class="nav" id="mainpost" *ngIf="Islogged" routerLinkActive="active">Manage posts
+		 <a routerLink="/admin/createpost" id="subpost" class="blueball">Create post</a> 
+		 <a routerLink="/admin/posts" id="subpost" class="blueball">Post list</a> 
+		 <a routerLink="/admin/createcategory" id="subpost" class="blueball">create category </a> 
+	</div>
+	<div class="nav" id="mainmenu" *ngIf="Isadmin" >Manage users
+		 <a routerLink="/admin/users" id="submenu" class="blueball" >Users</a> 
+		 <a routerLink="/admin/users/create" id="submenu" class="blueball" >Create User</a> 
+	</div>
+		<a  id="login" routerLink="admin/login" *ngIf="logbtn" >login</a>
+		<a  id="logout" (click)="logout()" *ngIf="outbtn" class="nav">logout</a>
+	<div>
+

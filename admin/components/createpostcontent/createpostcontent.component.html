@@ -1,0 +1,34 @@
+
+<h2 style="color: red">
+	{{amessage}}
+</h2>
+<form [formGroup]="PostcontentForm">
+	<label>
+		Title:
+		<input type="text" formControlName="posttitle" class="titleinput" >
+	</label>
+		<input type="file"  (change)="onfileSelect($event)">
+		<quill-editor formControlName="contentdetail"
+			      [styles]="{height: '250px'}">
+		</quill-editor>
+		<!-- selected material  -->
+	<mat-form-field >
+	<mat-label>Select Category</mat-label>
+	<mat-select [(value)]="selected" >
+	<div *ngFor="let C of ccategory">
+	<mat-option value="{{C.categoryid}}">{{C.categoryname}}</mat-option>
+			</div>		    
+			</mat-select>
+		</mat-form-field>
+		<!-- selected material  -->
+</form>
+<br>
+<h3> {{detail}} </h3>
+<button (click)="sendpayloadform()" class="bluebtn"> send
+
+</button>
+
+<br>
+
+<input type="date" id="start" name="trip-start">
+
